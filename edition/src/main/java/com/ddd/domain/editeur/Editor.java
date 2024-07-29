@@ -1,6 +1,7 @@
 package com.ddd.domain.editeur;
 
 import com.ddd.domain.Skill;
+import com.ddd.domain.article.Article;
 import lombok.*;
 
 import java.util.List;
@@ -15,4 +16,7 @@ public class Editor {
     private List<Skill> skills;
     private String email;
 
+    public void analyze(Article article) {
+
+    }
 }

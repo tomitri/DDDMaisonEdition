@@ -15,5 +15,4 @@ public class Article {
     private String domain;
 
 
-
 }
