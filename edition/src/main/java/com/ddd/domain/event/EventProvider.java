@@ -1,8 +1,9 @@
 package com.ddd.domain.event;
 
-public class EventProvider {
+public interface EventProvider {
 
-    public void publish(Event event) {
+    void publish(Event event);
+    Event get();
 
-    }
+    void remove(Event event);
 }

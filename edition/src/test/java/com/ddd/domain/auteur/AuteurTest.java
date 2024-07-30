@@ -47,6 +47,7 @@ class AuteurTest {
         ArgumentCaptor<SubmitedArticle> argumentCaptor = ArgumentCaptor.forClass(SubmitedArticle.class);
 
         verify(eventProvider, times(1)).publish(argumentCaptor.capture());
+
         SubmitedArticle submitedArticleCaptured = argumentCaptor.getValue();
 
         assertThat(submitedArticleCaptured.getArticleId()).isEqualTo(article.getId());

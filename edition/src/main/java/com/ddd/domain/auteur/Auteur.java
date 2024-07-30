@@ -21,13 +21,10 @@ public class Auteur {
     private String email;
     private EventProvider eventProvider;
 
-
     public void submit(Article article) {
         SubmitedArticle event = new SubmitedArticle();
         event.setArticleId(article.getId());
         eventProvider.publish(event);
     }
-
-
 
 }
