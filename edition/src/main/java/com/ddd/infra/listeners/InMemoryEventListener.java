@@ -24,7 +24,7 @@ public class InMemoryEventListener {
     }
 
     void listen() throws InterruptedException {
-        for (;;) {
+        for (; ; ) {
             Event event = inMemoryEventProvider.get();
             if (event instanceof SubmitedArticle) {
                 editorProvider.getFirstAvailable().ifPresent(editor -> {
@@ -32,7 +32,7 @@ public class InMemoryEventListener {
                             .ifPresent(article -> {
                                 editor.analyze(article);
                                 inMemoryEventProvider.remove(event);
-                      });
+                            });
                 });
 
             }
